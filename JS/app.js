@@ -93,16 +93,82 @@
 
 // let brojOkretanja = prompt("Unesi broj okretanja petlje: ");
 
-let a = 0;
-for (let i = 0; i < 3; i++) {
-  //   console.log("nesto", i);
-  a += +prompt("Dodaj broj");
-  console.log(a, i);
-}
+// let a = 0;
+// for (let i = 0; i < 3; i++) {
+//   //   console.log("nesto", i);
+//   a += +prompt("Dodaj broj");
+//   console.log(a, i);
+// }
 
 // +"3"
-console.log(a);
+// console.log(a);
 // "0" + +"5" + +"5" + +"5"
 // 0+5+5+5
 // let nekiBroj = "5" + "tri";
 // console.log(nekiBroj);
+
+// let brojPonavljanja = prompt("Unesite broj brojeva");
+// let proizvod = 1;
+
+// for (let i = 0; i < brojPonavljanja; i++) {
+//   proizvod *= +prompt("Unesite broj");
+// }
+
+// console.log(proizvod);
+
+// let someNumber = 20;
+
+// // someNumber / 2 ===0
+// // console.log(someNumber % 2);
+// someNumber % 2 !== 0
+//   ? console.log("Broj je paran")
+//   : console.log("Broj je neparan");
+
+// if (someNumber % 2 === 0) {
+//   console.log("paran");
+// } else {
+//   console.log("neparan");
+// }
+
+// let someString = "telefon";
+
+// someNumber.length > 5 ? console.log("rec je duza") : console.log("rec je kraca")
+
+// for (let i = 0; i < 10; i++) {
+//   if (i % 2 === 0) {
+//     console.log(i, "paran broj");
+//   } else {
+//     console.log(i, "neparan broj");
+//   }
+// }
+
+// deljiv sa 3 - FIZZ
+// deljiv sa 5 - buzz
+// deljiv i sa 3 i sa 5 - fizzbuzz
+
+// for (let i = 0; i < 100; i++) {
+//   if (i % 15 === 0) {
+//     console.log("fizzbuzz");
+//   } else if (i % 3 === 0) {
+//     console.log("fizz");
+//   } else if (i % 5 === 0) {
+//     console.log("buzz");
+//   } else {
+//     console.log(i);
+//   }
+// }
+
+// let a = 10;
+// while (a < 5) {
+//   console.log("a je manje od 5", a);
+//   a++;
+// }
+
+// do {
+//   console.log("A je manje od 5", a);
+//   a++;
+// } while (a < 5);
+
+for (let i = 0; i < 10; i++) {
+  console.log(i);
+}
