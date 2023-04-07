@@ -107,6 +107,8 @@
 // let nekiBroj = "5" + "tri";
 // console.log(nekiBroj);
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 // let brojPonavljanja = prompt("Unesite broj brojeva");
 // let proizvod = 1;
 
@@ -169,6 +171,60 @@
 //   a++;
 // } while (a < 5);
 
-for (let i = 0; i < 10; i++) {
-  console.log(i);
+// for (let i = 0; i < 10; i++) {
+//   console.log(i);
+// }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// let a = 8;
+
+// while (a < 10) {
+//   console.log("nestooo");
+//   break;
+// }
+// do {
+//   console.log("do while");
+//   break;
+// } while (a < 10);
+
+// let a = Math.floor(Math.random() * 100) + 1;
+// let pokusaj;
+
+// do {
+//   pokusaj = prompt("Unesite broj");
+//   if (+pokusaj > a) {
+//     alert("Probaj manji broj");
+//   } else if (+pokusaj < a) {
+//     alert("Probaj veci broj");
+//   } else {
+//     alert("Pogodili ste tacan broj");
+//   }
+// } while (+pokusaj !== a);
+
+// // guesing number game;
+
+// FUNCTIONS ////////////////////////////////////////////////////
+
+// function myFirstFunction() {
+//   // console.log("Aldin");
+//   let a = 5;
+//   let b = 6;
+//   let zbir = a + b;
+//   return zbir;
+// }
+
+// // let nekiDrugiZbir = myFirstFunction();
+// // console.log(nekiDrugiZbir + 20);
+// console.log(myFirstFunction() + 20);
+
+function mySecondFunction(argument1, argument2) {
+  // let a = 13;
+  console.log(argument1 + argument2);
+  // return a;
 }
+
+// console.log(mySecondFunction());
+
+mySecondFunction(100, 30);
+// mySecondFunction(10);
