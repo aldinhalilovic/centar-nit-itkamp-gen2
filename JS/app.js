@@ -218,13 +218,85 @@
 // // console.log(nekiDrugiZbir + 20);
 // console.log(myFirstFunction() + 20);
 
-function mySecondFunction(argument1, argument2) {
-  // let a = 13;
-  console.log(argument1 + argument2);
-  // return a;
-}
+// function mySecondFunction(argument1, argument2) {
+// let a = 13;
+// console.log(argument1 + argument2);
+// return a;
+// }
 
 // console.log(mySecondFunction());
 
-mySecondFunction(100, 30);
+// mySecondFunction(100, 30);
 // mySecondFunction(10);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function sqrNum(number1) {
+  // return number1 * number1
+
+  let square = number1 * number1;
+  return square;
+}
+
+// console.log(sqrNum(3));
+// console.log(sqrNum(10));
+
+function razlika(number1, number2) {
+  // console.log(number1 - number2);
+  // return number1 - number2;
+  if (number1 > number2) {
+    return number1 - number2;
+  } else if (number2 > number1) {
+    return number2 - number1;
+  } else {
+    return "Uneli ste pogresne brojeve,Molimo vas unesite 2 razlicita broja";
+  }
+}
+
+// console.log(razlika(13, 23));
+
+const nekaFunkcija = function () {
+  console.log("Ovo je nameless function");
+};
+
+// nekaFunkcija();
+
+const celziusToFarenheit = function (cel) {
+  return cel * 1.8 + 32;
+};
+
+const farenheitToCelzius = function (far) {
+  return ((far - 32) * 5) / 9;
+};
+
+///////////////////////////////////////////NIZOVI////////////////////////////////////////////////
+
+let nekiDrugiNiz = [3, 10, 16, "Nesto", true, false, undefined, NaN, "bilosta"];
+
+// console.log(cars[0]);
+// console.log(cars[1]);
+// console.log(cars[2]);
+// console.log(cars[3]);
+// console.log(cars[4]);
+
+// console.log(cars.length);
+// console.log(nekiDrugiNiz.length);
+let cars = ["BMW", "MERCEDES", "FIAT", "AUDI", "VW"];
+
+// for (let i = 0; i < cars.length; i++) {
+//   if (i % 2 === 0) {
+//     console.log(cars[i], i);
+//   }
+// }
+
+// let ime = "nekoime";
+// ["n", "e", "k", "o", "i", "m", "e"];
+// console.log(ime.length);
+// console.log(ime[0]);
+
+// 'ALDIN HALILOVIC'
+// ['','','','']
+
+for (let i = cars.length - 1; i >= 0; i--) {
+  console.log(cars[i]);
+}
