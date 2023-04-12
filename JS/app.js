@@ -261,42 +261,83 @@ const nekaFunkcija = function () {
 
 // nekaFunkcija();
 
-const celziusToFarenheit = function (cel) {
-  return cel * 1.8 + 32;
-};
+// const celziusToFarenheit = function (cel) {
+//   return cel * 1.8 + 32;
+// };
 
-const farenheitToCelzius = function (far) {
-  return ((far - 32) * 5) / 9;
-};
+// const farenheitToCelzius = function (far) {
+//   return ((far - 32) * 5) / 9;
+// };
 
 ///////////////////////////////////////////NIZOVI////////////////////////////////////////////////
 
-let nekiDrugiNiz = [3, 10, 16, "Nesto", true, false, undefined, NaN, "bilosta"];
+// let nekiDrugiNiz = [3, 10, 16, "Nesto", true, false, undefined, NaN, "bilosta"];
 
-// console.log(cars[0]);
-// console.log(cars[1]);
-// console.log(cars[2]);
-// console.log(cars[3]);
-// console.log(cars[4]);
+// // console.log(cars[0]);
+// // console.log(cars[1]);
+// // console.log(cars[2]);
+// // console.log(cars[3]);
+// // console.log(cars[4]);
 
-// console.log(cars.length);
-// console.log(nekiDrugiNiz.length);
-let cars = ["BMW", "MERCEDES", "FIAT", "AUDI", "VW"];
+// // console.log(cars.length);
+// // console.log(nekiDrugiNiz.length);
+// let cars = ["BMW", "MERCEDES", "FIAT", "AUDI", "VW"];
 
-// for (let i = 0; i < cars.length; i++) {
-//   if (i % 2 === 0) {
-//     console.log(cars[i], i);
-//   }
+// // for (let i = 0; i < cars.length; i++) {
+// //   if (i % 2 === 0) {
+// //     console.log(cars[i], i);
+// //   }
+// // }
+
+// // let ime = "nekoime";
+// // ["n", "e", "k", "o", "i", "m", "e"];
+// // console.log(ime.length);
+// // console.log(ime[0]);
+
+// // 'ALDIN HALILOVIC'
+// // ['','','','']
+
+// for (let i = cars.length - 1; i >= 0; i--) {
+//   console.log(cars[i]);
 // }
 
-// let ime = "nekoime";
-// ["n", "e", "k", "o", "i", "m", "e"];
-// console.log(ime.length);
-// console.log(ime[0]);
+////////////////////////////////////////////////////////////////////////////////////////////////
 
-// 'ALDIN HALILOVIC'
-// ['','','','']
+// let someArray = [3, 10, 6, 18, 23, 40, 31];
+// let anotherArray = [23, 214, 2345, 3543, 65435, 344, 234, 232, 32];
+// let anotherOne = [
+//   23, 23, 4234, 324, 324, 12, 312, 3213, 21, 4234, 324, 213, 123, 213, 2132,
+// ];
 
-for (let i = cars.length - 1; i >= 0; i--) {
-  console.log(cars[i]);
+// function getMaxNumber(niz) {
+//   const duzinaNiza = niz.length;
+//   let number = 0;
+
+//   for (let i = 0; i < duzinaNiza; i++) {
+//     if (number < niz[i]) {
+//       number = niz[i];
+//     }
+//   }
+//   return number;
+// }
+
+// console.log(getMaxNumber(anotherOne));
+
+let matrica = [
+  [1, 2, 3], // 1
+  [4, 5, 6], // 2
+  [7, 8, 9], // 3
+];
+
+// for (let i = 0; i < matrica.length; i++) {
+//   console.log(matrica[i]);
+// }
+
+// console.log(matrica[0][1]);
+// console.log(matrica[2][2]);
+
+for (let i = 0; i < matrica.length; i++) {
+  for (let j = 0; j < matrica[i].length; j++) {
+    console.log(matrica[i][j]);
+  }
 }
