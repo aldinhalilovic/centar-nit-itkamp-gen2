@@ -323,21 +323,139 @@ const nekaFunkcija = function () {
 
 // console.log(getMaxNumber(anotherOne));
 
-let matrica = [
-  [1, 2, 3], // 1
-  [4, 5, 6], // 2
-  [7, 8, 9], // 3
-];
+// let matrica = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9],
+// ];
+
+// // for (let i = 0; i < matrica.length; i++) {
+// //   console.log(matrica[i]);
+// // }
+
+// // console.log(matrica[0][1]);
+// // console.log(matrica[2][2]);
 
 // for (let i = 0; i < matrica.length; i++) {
-//   console.log(matrica[i]);
+//   for (let j = 0; j < matrica[i].length; j++) {
+//     console.log(matrica[i][j]);
+//   }
 // }
 
-// console.log(matrica[0][1]);
-// console.log(matrica[2][2]);
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-for (let i = 0; i < matrica.length; i++) {
-  for (let j = 0; j < matrica[i].length; j++) {
-    console.log(matrica[i][j]);
-  }
-}
+// let cars = ["BMW", "MErcedes", "Audi"];
+
+// for (let i in cars) {
+//   console.log(cars[i]);
+// }
+
+let cars = ["BMW", "MErcedes", "Audi"];
+
+// console.log(cars.length);
+
+// cars.length = 2;
+
+// console.log(cars);
+
+// cars.length = 10;
+
+// console.log(cars);
+
+// cars[0] = "FIAT";
+// cars[5] = 10;
+// cars[2] = "ubaceni element";
+// cars[3] = "nesto trece";
+
+// console.log(cars);
+
+// console.log(cars);
+
+// cars.push("nebitno");
+
+// console.log(cars, cars.length);
+// cars.push("Bitno");
+// console.log(cars, cars.length);
+
+// let lastElement = cars.pop();
+
+// console.log(cars, cars.length);
+// console.log(lastElement);
+
+// cars.unshift("Prvi Element");
+// console.log(cars);
+// let firstElement = cars.shift();
+// console.log(cars);
+// console.log(firstElement);
+// cars.push("aldin", "halilovic", "treci", "cetvrti");
+// console.log(cars);
+// cars.pop();
+// cars.pop();
+// cars.pop();
+// cars.pop();
+// cars.pop();
+// cars.pop();
+// console.log(cars);
+
+// cars.push();
+
+// let firstThree = [1, 3, 5];
+// let secondThree = [2, 4, 6];
+
+// let combined = firstThree.concat(secondThree);
+
+// console.log(combined);
+
+// console.log(combined.reverse());
+
+// let randomItems = ["telefon", "ranac", "ajfon", "laptop", "coach"];
+// console.log(randomItems, randomItems.length);
+
+// let a = randomItems.slice(3);
+// console.log(a);
+// console.log(randomItems);
+// a.push("nesto");
+// console.log(a);
+// a.pop();
+// console.log(a);
+
+// let a = randomItems.splice(0, 3);
+// console.log(a, "parce niza");
+// console.log(randomItems, "originalni niz");
+
+// let numbers = [1, 3, 5, 7, 9];
+
+// //            [1,3,5,7,9,2,4,6,8]
+
+// for (let i = 0; i < 10; i++) {
+//   if (i % 2 === 0 && i !== 0) {
+//     numbers.push(i);
+//   }
+// }
+
+// console.log(numbers);
+// console.log(numbers.reverse());
+
+// console.log(nekaRec.length);
+// console.log(nekaRec[0]);
+
+// nekaRec[2] = "A";
+// nekaRec[0] = "C";
+// console.log(nekaRec);
+
+let nekaRec = "ALDIN";
+
+let al = nekaRec.slice(0, 2);
+let rest = nekaRec.slice(2);
+
+let letterA = nekaRec.slice(0, 1);
+
+console.log(al);
+console.log(letterA);
+console.log(rest);
+
+let prvaTri = al.concat(letterA);
+
+let fullName = prvaTri.concat(rest);
+
+console.log(fullName);
