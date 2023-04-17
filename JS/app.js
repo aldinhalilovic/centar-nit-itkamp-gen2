@@ -443,19 +443,78 @@ let cars = ["BMW", "MErcedes", "Audi"];
 // nekaRec[0] = "C";
 // console.log(nekaRec);
 
-let nekaRec = "ALDIN";
+// let nekaRec = "ALDIN";
 
-let al = nekaRec.slice(0, 2);
-let rest = nekaRec.slice(2);
+// let al = nekaRec.slice(0, 2);
+// let rest = nekaRec.slice(2);
 
-let letterA = nekaRec.slice(0, 1);
+// let letterA = nekaRec.slice(0, 1);
 
-console.log(al);
-console.log(letterA);
-console.log(rest);
+// console.log(al);
+// console.log(letterA);
+// console.log(rest);
 
-let prvaTri = al.concat(letterA);
+// let prvaTri = al.concat(letterA);
 
-let fullName = prvaTri.concat(rest);
+// let fullName = prvaTri.concat(rest);
 
-console.log(fullName);
+// console.log(fullName);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// let ime = "aldin";
+// ime[0] = "i";
+// console.log(ime);
+
+// let brojevi = [3, 5, 7, 88, 12];
+// console.log(brojevi);
+// brojevi[0] = 9;
+// console.log(brojevi);
+
+// let ime = "aldin";
+
+// function changeLetter(letter) {
+//   ime[0] = a;
+//   return ime;
+// }
+
+// let a = "i";
+
+// console.log(ime);
+
+// function imeneko() {
+//   console.log("aslkdjsaljdlaksj");
+// }
+
+// imeneko();
+
+// const nestpoarjsaodk = function () {
+//   console.log("asad");
+// };
+
+// nestpoarjsaodk();
+
+const prvaArrowFunction = () => {
+  console.log("prvi");
+  console.log("drugi");
+};
+
+prvaArrowFunction();
+
+const squareNum = (el) => el * el;
+
+// console.log(squareNum(10));
+
+const istiNiz = [1, 3, 5, 7, 9];
+
+const sumNumbers = (nekiNiz) => {
+  let start = 1;
+
+  for (let i = 0; i < nekiNiz.length; i++) {
+    start *= nekiNiz[i];
+  }
+
+  return start;
+};
+
+console.log(sumNumbers(istiNiz));
