@@ -494,27 +494,90 @@ let cars = ["BMW", "MErcedes", "Audi"];
 
 // nestpoarjsaodk();
 
-const prvaArrowFunction = () => {
-  console.log("prvi");
-  console.log("drugi");
-};
+// const prvaArrowFunction = () => {
+//   console.log("prvi");
+//   console.log("drugi");
+// };
 
-prvaArrowFunction();
+// prvaArrowFunction();
 
-const squareNum = (el) => el * el;
+// const squareNum = (el) => el * el;
 
 // console.log(squareNum(10));
 
-const istiNiz = [1, 3, 5, 7, 9];
+// const istiNiz = [1, 3, 5, 7, 9];
 
-const sumNumbers = (nekiNiz) => {
-  let start = 1;
+// const sumNumbers = (nekiNiz) => {
+//   let start = 1;
 
-  for (let i = 0; i < nekiNiz.length; i++) {
-    start *= nekiNiz[i];
+//   for (let i = 0; i < nekiNiz.length; i++) {
+//     start *= nekiNiz[i];
+//   }
+
+//   return start;
+// };
+
+// console.log(sumNumbers(istiNiz));
+
+/////////////////////////////////////////////////////////////////////////////////
+
+// let myName;
+// console.log(myName)
+
+// if (myName) {
+//   console.log("imam ime")
+// } else {
+//   console.log("Sacekaj")
+// }
+
+// myName = "ALdin"
+
+// if (myName) {
+//   console.log("imam ime")
+// } else {
+//   console.log("Sacekaj")
+// }
+// console.log(myName)
+
+// if (!!myName) {
+//   console.log("Tacno")
+// }
+
+// undefined || true
+// null || true
+// 0 || true
+// -0 || true
+// '' || true
+// false || true
+// 0n || true
+// NaN || true
+
+// let myLastName;
+
+// for (let i = 0; i < 5; i++) {
+//   // console.log(myLastName, i)
+//   if (i === 3) {
+//     myLastName = "Aldin";
+//   }
+//   if (myLastName) {
+//     console.log("Imam ime", i);
+//   } else {
+//     console.log("Sacekaj redzi", i);
+//   }
+// }
+
+let b = 3;
+{
+  var a;
+  let b = 10;
+  const c = 15;
+
+  {
+    // let b = 10;
+    // const c = 20;
+    console.log(b, "blok koda");
+    console.log(c, "blok koda");
   }
-
-  return start;
-};
-
-console.log(sumNumbers(istiNiz));
+}
+console.log(b, "global scope");
+console.log(c, "global scope");
