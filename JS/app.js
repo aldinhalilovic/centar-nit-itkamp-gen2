@@ -566,18 +566,73 @@ let cars = ["BMW", "MErcedes", "Audi"];
 //   }
 // }
 
-let b = 3;
-{
-  var a;
-  let b = 10;
-  const c = 15;
+// let b = 3;
+// {
+//   var a;
+//   let b = 10;
+//   const c = 15;
 
-  {
-    // let b = 10;
-    // const c = 20;
-    console.log(b, "blok koda");
-    console.log(c, "blok koda");
-  }
+//   {
+//     // let b = 10;
+//     // const c = 20;
+//     console.log(b, "blok koda");
+//     console.log(c, "blok koda");
+//   }
+// }
+// console.log(b, "global scope");
+// console.log(c, "global scope");
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+function sayHello() {
+  console.log("Hello Aldin");
 }
-console.log(b, "global scope");
-console.log(c, "global scope");
+
+function helloSomeone() {
+  console.log("Cao Mehmed");
+}
+
+function anotherFunction(nekaFunkcija1, nekaFunkcija2) {
+  console.log("Cao Dzenis");
+  console.log("Cao Redzi");
+  console.log("prekid");
+  nekaFunkcija1();
+  nekaFunkcija2();
+  console.log("prekid");
+  console.log("Cao Tajra");
+}
+
+// anotherFunction(sayHello);
+// anotherFunction(helloSomeone, sayHello);
+
+// function addTwoNumbers(a, b) {
+//   return a + b;
+// }
+
+// function biggerFunction(someFunction) {
+//   let a = 3;
+//   let b = 10;
+
+//   return someFunction(a, b);
+// }
+
+// console.log(biggerFunction(addTwoNumbers));
+
+let someArray = [3, 5, 123, 54, 213, 54, 23, 123, 435, 123, 8];
+let secondArray = [1, 23, 531, 412, 321345, 34513, 4213, 12];
+let helperFunction = (a) => a + 10;
+
+function customFunction(aldin, callbackFunkciju) {
+  let pomocniNiz = [];
+  for (let i = 0; i < aldin.length; i++) {
+    console.log(callbackFunkciju(aldin[i]));
+    pomocniNiz.push(callbackFunkciju(aldin[i]));
+  }
+
+  return pomocniNiz;
+}
+
+console.log(someArray);
+console.log(customFunction(someArray, helperFunction));
+console.log(secondArray);
+console.log(customFunction(secondArray, helperFunction));
