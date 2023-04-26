@@ -617,7 +617,6 @@ function anotherFunction(nekaFunkcija1, nekaFunkcija2) {
 // }
 
 // console.log(biggerFunction(addTwoNumbers));
-
 let someArray = [3, 5, 123, 54, 213, 54, 23, 123, 435, 123, 8];
 let secondArray = [1, 23, 531, 412, 321345, 34513, 4213, 12];
 let helperFunction = (a) => a + 10;
@@ -632,7 +631,53 @@ function customFunction(aldin, callbackFunkciju) {
   return pomocniNiz;
 }
 
-console.log(someArray);
-console.log(customFunction(someArray, helperFunction));
-console.log(secondArray);
-console.log(customFunction(secondArray, helperFunction));
+someArray.map((el) => el + 10);
+
+// console.log(someArray);
+// console.log(customFunction(someArray, helperFunction));
+// console.log(secondArray);
+// console.log(customFunction(secondArray, helperFunction));
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+const nekiNiz = [5, 6, 2, 17, 11, 115, 69];
+
+const prvaMap = nekiNiz.map((el) => el * 2);
+
+// console.log(prvaMap);
+
+const treciNiz = prvaMap.slice(0, 3);
+
+const squareOfNum = nekiNiz.map((el) => el * el);
+
+const someAges = [2, 8, 7, 5, 1, 15, 10, 9, 13];
+// * 7
+
+const someKms = [20, 12, 22, 25, 33, 33, 99, 50, 70];
+// * 1.6
+
+const nekeBrojeve = [36, 17, 22, 6, 1, 10, 19, 33, 52];
+
+const proizvodMapFn = nekeBrojeve.map((el) => (el % 2 === 0 ? el * 2 : el * 3));
+
+// console.log(nekeBrojeve);
+// console.log(proizvodMapFn);
+
+let name = "aldin";
+
+const matrica = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+
+let mapMatrice = matrica.map((manjiNiz) =>
+  manjiNiz.map((el) => {
+    if (el % 2 === 0) {
+      return el * 2;
+    } else {
+      return el * 3;
+    }
+  })
+);
+
+console.log(mapMatrice);
