@@ -617,6 +617,7 @@ function anotherFunction(nekaFunkcija1, nekaFunkcija2) {
 // }
 
 // console.log(biggerFunction(addTwoNumbers));
+
 let someArray = [3, 5, 123, 54, 213, 54, 23, 123, 435, 123, 8];
 let secondArray = [1, 23, 531, 412, 321345, 34513, 4213, 12];
 let helperFunction = (a) => a + 10;
@@ -680,4 +681,44 @@ let mapMatrice = matrica.map((manjiNiz) =>
   })
 );
 
-console.log(mapMatrice);
+// console.log(mapMatrice);
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+const brojevi = [6, 5, 27, 28, 29, 31, 33, 15];
+
+const neparniBrojevi = brojevi.filter((el) => el % 2 === 0);
+
+// console.log(brojevi);
+// console.log(neparniBrojevi);
+
+// const neparniMapBrojevi = brojevi.map((el) => el % 2 !== 0);
+
+// console.log(neparniMapBrojevi);
+
+const biggerNums = brojevi.filter((el) => el > 16);
+
+// console.log(biggerNums);
+
+const ourCustomFilter = (niz, callbackFn) => {
+  const noviFilterNiz = [];
+  for (let i = 0; i < niz.length; i++) {
+    if (callbackFn(niz[i])) {
+      noviFilterNiz.push(niz[i]);
+    }
+  }
+  return noviFilterNiz;
+};
+
+function customCallback(el) {
+  return el > 10;
+}
+
+// console.log(ourCustomFilter(brojevi, customCallback));
+
+const nekiBrojevi = [7, 12, 1, 8, 19, 20, 15, 22, 25, 30, 2, 10, 63];
+
+const pomnozenibrojevi = nekiBrojevi.map((el) => el * 3);
+console.log(pomnozenibrojevi);
+
+const parnibrojevi = pomnozenibrojevi.filter((el) => el % 2 === 0);
+console.log(parnibrojevi);
