@@ -718,7 +718,73 @@ function customCallback(el) {
 const nekiBrojevi = [7, 12, 1, 8, 19, 20, 15, 22, 25, 30, 2, 10, 63];
 
 const pomnozenibrojevi = nekiBrojevi.map((el) => el * 3);
-console.log(pomnozenibrojevi);
+// console.log(pomnozenibrojevi);
 
 const parnibrojevi = pomnozenibrojevi.filter((el) => el % 2 === 0);
-console.log(parnibrojevi);
+// console.log(parnibrojevi);
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// [
+//   [12, 8],
+//   [10],
+//   [16]
+// ]
+
+const nekaMatrica = [
+  [12, 5, 8],
+  [3, 5, 10],
+  [16, 3, 7],
+];
+
+// const novaKakoSeZoveNesto = nekaMatrica.filter((el) => el % 2 === 0);
+const dveMape = nekaMatrica.map((niz) => niz.filter((el) => el % 2 === 0));
+
+// console.log(dveMape);
+
+const nizZaReduce = [2, 8, 14, 17, 10, 50, 60, 30, 43, 3, 9, 68];
+
+const zbirElemenata = nizZaReduce.reduce(
+  (previousValue, currentValue) => previousValue + currentValue
+);
+
+const averageNum = zbirElemenata / nizZaReduce.length;
+
+// console.log(averageNum);
+
+// console.log(zbirElemenata);
+
+//////////////////////////////////////OBJEKTI///////////////////////////////////////////////////////
+
+const ourFirstObject = {
+  car: "Alfa romeo",
+  vozac: "Dzenis Bronja",
+  suvozac: "Redzi (pod kaznom)",
+  godina: 23,
+  prijatelji: ["Mitar iz Dubica", "petrojka", "bilo sta"],
+  skills: {
+    html: "good",
+    css: "average",
+    lying: "bad",
+    josJedan: {
+      nekiProperti: "bilo koji",
+      josJedanObjekat: {
+        ja: "aldin",
+      },
+    },
+  },
+};
+
+[{}, {}];
+
+// console.log(ourFirstObject.skills.josJedan.josJedanObjekat.ja);
+
+// console.log(ourFirstObject);
+// console.log(ourFirstObject.skills.html);
+
+// console.log(ourFirstObject.prijatelji);
+// console.log(ourFirstObject.prijatelji[2]);
+
+// console.log(ourFirstObject.vozac);
+
+// console.log(ourFirstObject["suvozac"]);
