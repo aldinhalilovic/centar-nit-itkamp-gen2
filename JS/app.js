@@ -788,3 +788,70 @@ const ourFirstObject = {
 // console.log(ourFirstObject.vozac);
 
 // console.log(ourFirstObject["suvozac"]);
+
+// const aldin = ['nasdindas', 'asldkjasd'smadkasd'asd]
+
+// const user = {
+//   name: "aldin",
+//   lastname: "bla bla bla",
+//   pol: "musko",
+//   age: 20,
+// };
+
+const ime = "Aldin";
+
+const user = {
+  ime,
+  prezime: "Halilovic",
+  skills: ["html", "css", "js", "react"],
+};
+
+const myLastName = user.prezime;
+
+const skillsArray = user.skills;
+
+// console.log("Ja se prezivam " + myLastName);
+
+// skillsArray.pop();
+
+// console.log(user);
+
+const classroom = {
+  brojUcenika: 10,
+  vremeCasa: 10.0,
+  ciklus: "2 ciklus",
+  profesor: "aldin",
+  ucenici: [
+    // [prvi objekat, drugi objekat, treci objekat]
+    {
+      name: "redzi",
+      proffesion: "basketball player",
+    },
+    {
+      name: "bronja",
+      proffesion: "auto limar",
+    },
+    {
+      name: "neki lik",
+      proffesion: " peti sesti ",
+    },
+  ],
+  sayHello() {
+    console.log("hello " + classroom.profesor);
+  },
+  helloRedzi() {
+    console.log("hello" + classroom.ucenici[0].name);
+  },
+};
+
+classroom.sayHello();
+
+const nasNiz = classroom.ucenici;
+// const imanNiz = nasNiz.map((el) => el.name);
+const imanNiz = nasNiz.map((el) => {
+  return {
+    name: el.name,
+  };
+});
+
+console.log(imanNiz);
