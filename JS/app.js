@@ -816,6 +816,49 @@ const skillsArray = user.skills;
 
 // console.log(user);
 
+// classroom.sayHello();
+
+// const nasNiz = classroom.ucenici;
+// const imanNiz = nasNiz.map((el) => el.name);
+// const imanNiz = nasNiz.map((el) => {
+//   return {
+//     name: el.name,
+//   };
+// });
+
+// console.log(imanNiz);
+
+// const nekiObjekat = [{1}, {2}, {3}, {4}];
+
+const ourClassroom = [
+  { name: "Tajra", id: 1, age: 17 },
+  { name: "Iman", id: 2, age: 17 },
+  { name: "Dzenis", id: 3, age: 23 },
+  { name: "Tarik", id: 4, age: 25 },
+  { name: "Imad", id: 5, age: 17 },
+  { name: "Haris", id: 6, age: 18 },
+  { name: "Mehmed", id: 7, age: 16 },
+  { name: "Redzep", id: 8, age: 18 },
+];
+
+const filteredClassroom = ourClassroom.filter((clas) => clas.age >= 18);
+
+// console.log(ourClassroom);
+// console.log(filteredClassroom);
+
+const evenIds = ourClassroom.filter((el) => el.id % 2 === 0);
+// console.log(evenIds);
+
+const onlyIds = evenIds.map((el) => {
+  return {
+    id: el.id,
+  };
+});
+
+const numberIds = ourClassroom.map((el) => el.id);
+
+// console.log(numberIds);
+
 const classroom = {
   brojUcenika: 10,
   vremeCasa: 10.0,
@@ -837,21 +880,177 @@ const classroom = {
     },
   ],
   sayHello() {
-    console.log("hello " + classroom.profesor);
+    console.log("hello " + this.profesor);
   },
   helloRedzi() {
-    console.log("hello" + classroom.ucenici[0].name);
+    console.log("hello" + this.ucenici[0].name);
+  },
+  thisKeyword() {
+    console.log(this.profesor, "ovo je this keyword");
   },
 };
 
-classroom.sayHello();
+// classroom.thisKeyword();
+// classroom.helloRedzi();
+// classroom.sayHello();
 
-const nasNiz = classroom.ucenici;
-// const imanNiz = nasNiz.map((el) => el.name);
-const imanNiz = nasNiz.map((el) => {
+// console.log(this);
+
+// const nekaVarijabla = "nesto";
+// const neka_druga_varijabla = "nesto drugo";
+
+// const BASE_URL = "https://www.google.com/blablabal";
+
+// const prvoIme = "aldin";
+// const drugoIme = "redzi";
+
+// console.log(prvoIme + " i " + drugoIme);
+
+// console.log(`${prvoIme} i ${drugoIme}`);
+
+// `https://jsonplaceholder.typicode.com/todos/${nekaVarijablaZaurl}`;
+
+// const nebitnoNesto = {
+//   televizor: "sharp",
+//   laptop: "acer",
+//   telefon: "apple",
+// };
+
+// nebitnoNesto.punjac = "za laptop";
+
+// console.log(nebitnoNesto);
+
+// delete nebitnoNesto.televizor;
+// console.log(nebitnoNesto);
+
+const watchList = [
+  {
+    Title: "Inception",
+    Year: "2010",
+    Rated: "PG-13",
+    Released: "16 Jul 2010",
+    Runtime: "148 min",
+    Genre: "Action, Adventure, Crime",
+    Director: "Christopher Nolan",
+    Writer: "Christopher Nolan",
+    Actors: "Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page, Tom Hardy",
+    Plot: "A thief, who steals corporate secrets through use of dream-sharing technology, is given the inverse task of planting an idea into the mind of a CEO.",
+    Language: "English, Japanese, French",
+    Country: "USA, UK",
+    Awards: "Won 4 Oscars. Another 143 wins & 198 nominations.",
+    Poster:
+      "http://ia.media-imdb.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
+    Metascore: "74",
+    imdbRating: "8.8",
+    imdbVotes: "1,446,708",
+    imdbID: "tt1375666",
+    Type: "movie",
+    Response: "True",
+  },
+  {
+    Title: "Interstellar",
+    Year: "2014",
+    Rated: "PG-13",
+    Released: "07 Nov 2014",
+    Runtime: "169 min",
+    Genre: "Adventure, Drama, Sci-Fi",
+    Director: "Christopher Nolan",
+    Writer: "Jonathan Nolan, Christopher Nolan",
+    Actors: "Ellen Burstyn, Matthew McConaughey, Mackenzie Foy, John Lithgow",
+    Plot: "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+    Language: "English",
+    Country: "USA, UK",
+    Awards: "Won 1 Oscar. Another 39 wins & 132 nominations.",
+    Poster:
+      "http://ia.media-imdb.com/images/M/MV5BMjIxNTU4MzY4MF5BMl5BanBnXkFtZTgwMzM4ODI3MjE@._V1_SX300.jpg",
+    Metascore: "74",
+    imdbRating: "8.6",
+    imdbVotes: "910,366",
+    imdbID: "tt0816692",
+    Type: "movie",
+    Response: "True",
+  },
+  {
+    Title: "The Dark Knight",
+    Year: "2008",
+    Rated: "PG-13",
+    Released: "18 Jul 2008",
+    Runtime: "152 min",
+    Genre: "Action, Adventure, Crime",
+    Director: "Christopher Nolan",
+    Writer:
+      "Jonathan Nolan (screenplay), Christopher Nolan (screenplay), Christopher Nolan (story), David S. Goyer (story), Bob Kane (characters)",
+    Actors: "Christian Bale, Heath Ledger, Aaron Eckhart, Michael Caine",
+    Plot: "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, the caped crusader must come to terms with one of the greatest psychological tests of his ability to fight injustice.",
+    Language: "English, Mandarin",
+    Country: "USA, UK",
+    Awards: "Won 2 Oscars. Another 146 wins & 142 nominations.",
+    Poster:
+      "http://ia.media-imdb.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX300.jpg",
+    Metascore: "82",
+    imdbRating: "9.0",
+    imdbVotes: "1,652,832",
+    imdbID: "tt0468569",
+    Type: "movie",
+    Response: "True",
+  },
+  {
+    Title: "Batman Begins",
+    Year: "2005",
+    Rated: "PG-13",
+    Released: "15 Jun 2005",
+    Runtime: "140 min",
+    Genre: "Action, Adventure",
+    Director: "Christopher Nolan",
+    Writer:
+      "Bob Kane (characters), David S. Goyer (story), Christopher Nolan (screenplay), David S. Goyer (screenplay)",
+    Actors: "Christian Bale, Michael Caine, Liam Neeson, Katie Holmes",
+    Plot: "After training with his mentor, Batman begins his fight to free crime-ridden Gotham City from the corruption that Scarecrow and the League of Shadows have cast upon it.",
+    Language: "English, Urdu, Mandarin",
+    Country: "USA, UK",
+    Awards: "Nominated for 1 Oscar. Another 15 wins & 66 nominations.",
+    Poster:
+      "http://ia.media-imdb.com/images/M/MV5BNTM3OTc0MzM2OV5BMl5BanBnXkFtZTYwNzUwMTI3._V1_SX300.jpg",
+    Metascore: "70",
+    imdbRating: "8.3",
+    imdbVotes: "972,584",
+    imdbID: "tt0372784",
+    Type: "movie",
+    Response: "True",
+  },
+  {
+    Title: "Avatar",
+    Year: "2009",
+    Rated: "PG-13",
+    Released: "18 Dec 2009",
+    Runtime: "162 min",
+    Genre: "Action, Adventure, Fantasy",
+    Director: "James Cameron",
+    Writer: "James Cameron",
+    Actors: "Sam Worthington, Zoe Saldana, Sigourney Weaver, Stephen Lang",
+    Plot: "A paraplegic marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
+    Language: "English, Spanish",
+    Country: "USA, UK",
+    Awards: "Won 3 Oscars. Another 80 wins & 121 nominations.",
+    Poster:
+      "http://ia.media-imdb.com/images/M/MV5BMTYwOTEwNjAzMl5BMl5BanBnXkFtZTcwODc5MTUwMw@@._V1_SX300.jpg",
+    Metascore: "83",
+    imdbRating: "7.9",
+    imdbVotes: "876,575",
+    imdbID: "tt0499549",
+    Type: "movie",
+    Response: "True",
+  },
+];
+
+const mapArray = watchList.map((el) => {
   return {
-    name: el.name,
+    title: el.Title,
+    rating: el.imdbRating,
   };
 });
 
-console.log(imanNiz);
+console.log(mapArray);
+const filteredArray = mapArray.filter((el) => el.rating >= 8);
+
+console.log(filteredArray);
