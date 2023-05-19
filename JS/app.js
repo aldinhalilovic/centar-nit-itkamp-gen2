@@ -1043,14 +1043,241 @@ const watchList = [
   },
 ];
 
-const mapArray = watchList.map((el) => {
-  return {
-    title: el.Title,
-    rating: el.imdbRating,
-  };
+// const mapArray = watchList.map((el) => {
+//   return {
+//     // title: el.Title,
+//     rating: el.imdbRating,
+//   };
+// });
+
+// console.log(mapArray);
+// const filteredArray = mapArray.filter((el) => el.rating >= 8);
+
+// console.log(filteredArray);
+
+const filteredArrayMovies = watchList.filter((el) => {
+  if (+el.imdbRating >= 8.0) {
+    return {
+      title: el.Title,
+      rating: el.imdbRating,
+    };
+  }
 });
 
-console.log(mapArray);
-const filteredArray = mapArray.filter((el) => el.rating >= 8);
+console.log(filteredArrayMovies);
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+// let nekaVrednost = "imad";
 
-console.log(filteredArray);
+// console.log(`${nekaVrednost} je primer za template strings`);
+
+// console.log(nekaVrednost + " nesto trece");
+
+// console.log(this, "ovo je this");
+
+// const nasCustomObjekat = {
+//   odeljenje: "3-10",
+//   dukserica: "zelena",
+//   ja: "ne znam",
+//   godine: 30,
+//   brojLaptopova: 9,
+// };
+// const nasCustomObjekat2 = {
+//   odeljenje: "3-10",
+//   dukserica: "zelena",
+//   ja: "ne znam",
+//   godine: 40,
+//   brojLaptopova: 9,
+// };
+
+// function ourFirstCallFunction(argumentFirst, argumentSecond) {
+//   console.log(
+//     `${argumentFirst} ima ${this.godine} godina i ${argumentSecond} mu je ${this.dukserica} `
+//   );
+// }
+
+// ourFirstCallFunction.call(nasCustomObjekat, "Aldin", "kapa");
+
+// ourFirstCallFunction.apply(nasCustomObjekat2, ["aldin", "kapa"]);
+
+// const bindFunkcija = ourFirstCallFunction.bind(nasCustomObjekat2, "kapa");
+
+// bindFunkcija();
+
+// const user1 = {
+//   id: 1,
+//   godine: 12,
+//   ime: "prvo Ime",
+//   profesija: "HTML",
+//   vozila: ["mclaren", "ladu"],
+// };
+
+// const user2 = {
+//   id: 2,
+//   godine: 13,
+//   ime: "drugo Ime",
+//   profesija: "css",
+//   vozila: ["golf", "tesla", "passat", "touran"],
+// };
+
+// const user3 = {
+//   id: 3,
+//   godine: 25,
+//   ime: "trece Ime",
+//   profesija: "javascript",
+//   vozila: ["audi", "toyota", "michubishi"],
+// };
+
+// const user4 = {
+//   id: 4,
+//   godine: 33,
+//   ime: "cetvrto Ime",
+//   profesija: "typescript",
+//   vozila: ["volkswagen", "punto"],
+// };
+
+const allUsers = [
+  {
+    id: 1,
+    godine: 12,
+    ime: "prvo Ime",
+    profesija: "HTML",
+    vozila: ["mclaren", "ladu"],
+  },
+  {
+    id: 2,
+    godine: 13,
+    ime: "drugo Ime",
+    profesija: "css",
+    vozila: ["golf", "tesla", "passat", "touran"],
+  },
+  {
+    id: 3,
+    godine: 25,
+    ime: "trece Ime",
+    profesija: "javascript",
+    vozila: ["audi", "toyota", "michubishi"],
+  },
+  {
+    id: 4,
+    godine: 33,
+    ime: "cetvrto Ime",
+    profesija: "typescript",
+    vozila: ["volkswagen"],
+  },
+];
+
+function checkingUserAge() {
+  if (this.godine >= 18) {
+    console.log("svaka cast");
+  } else {
+    console.log(`dodji za ${18 - this.godine} godina`);
+  }
+}
+
+// checkingUserAge.call(user4);
+// checkingUserAge.call(user3);0
+// checkingUserAge.call(user2);
+// checkingUserAge.call(user1);
+
+// allUsers.map((user) => checkingUserAge.call(user));
+
+const ourDeleteFunction = (id, id2) =>
+  allUsers.filter((user) => user.id !== id && user.id !== id2);
+
+console.log(ourDeleteFunction(2, 3));
+// console.log(ourDeleteFunction(3));
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+const obnovaObjekta = {
+  name: "Aldin",
+  course: "js",
+};
+
+const noviObjekat = {
+  name: "Medina",
+  course: "Medicinska ",
+};
+
+obnovaObjekta.name;
+obnovaObjekta["course"];
+
+obnovaObjekta.prezime = "halilovic";
+
+function callFunkcija(argumentNeki) {
+  console.log(this.name, argumentNeki, "ovo je call funkcija");
+}
+
+// callFunkcija.call(obnovaObjekta, ["isto neki argument"]);
+// callFunkcija.call(noviObjekat, "drugi argument");
+
+// callFunkcija.apply(obnovaObjekta, [
+//   "asndjlsakdj",
+//   "alskdjklsjdklsa",
+//   "a;skdjslkdjs",
+// ]);
+
+const bindFunkcijaObnavljanje = callFunkcija.bind(obnovaObjekta, "nesto");
+
+// bindFunkcijaObnavljanje();
+
+const objectPractice = {
+  voda: "Maxi",
+  laptop: "Acer",
+  telefon: "iphone",
+};
+
+const kljucevi = Object.keys(objectPractice);
+
+// console.log(kljucevi);
+
+const vrednosit = Object.values(objectPractice);
+// console.log(vrednosit);
+
+// Object.freeze(objectPractice);
+Object.seal(objectPractice);
+
+// console.log(objectPractice);
+
+objectPractice.voda = "rosa";
+
+// console.log(objectPractice);
+
+// const functionInObject = {
+//   name: "aldin",
+//   voda: "Maxi",
+//   laptop: "Acer",
+//   telefon: "iphone",
+//   // sayHello() {
+//   //   console.log("Hello world");
+//   // },
+//   helloName() {
+//     console.log(`Hello ${this.name}`);
+//   },
+// };
+
+// functionInObject.sayHello();
+// functionInObject.helloName();
+
+// console.log(this);
+
+///////////////////////////////////CLOSURE////////////////////////////////////////////////////////////////
+
+let a = 10;
+
+function firstA() {
+  let b = 5;
+  console.log(b);
+}
+
+function secondA() {
+  let b = 3;
+  console.log(b);
+}
+
+function lastA() {
+  console.log(a);
+}
+
+firstA();
+secondA();
+lastA();
