@@ -1262,22 +1262,74 @@ objectPractice.voda = "rosa";
 
 ///////////////////////////////////CLOSURE////////////////////////////////////////////////////////////////
 
-let a = 10;
+// let a = 10;
 
-function firstA() {
-  let b = 5;
-  console.log(b);
-}
+// function firstA() {
+//   let b = 5;
+//   console.log(b);
+// }
 
-function secondA() {
-  let b = 3;
-  console.log(b);
-}
+// function secondA() {
+//   let b = 3;
+//   console.log(b);
+// }
 
-function lastA() {
+// function lastA() {
+//   console.log(a);
+// }
+
+// firstA();
+// secondA();
+// lastA();
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+let a = 5;
+
+function prva() {
   console.log(a);
 }
 
-firstA();
-secondA();
-lastA();
+function druga() {
+  let a = 7;
+  console.log(a);
+}
+
+function treca() {
+  let a = 3;
+  console.log(a);
+}
+
+// prva();
+// druga();
+// treca();
+
+function createUser(userName, userLastname) {
+  return {
+    name: userName,
+    lastName: userLastname,
+  };
+}
+
+const userAldin = createUser("aldin", "halilovic");
+
+// console.log(userAldin);
+
+class User {
+  // ime;
+  // prezime;
+  // posao;
+  // pribivaliste = "Novi Pazar";
+  // kredit;
+  constructor(name, lastname, job, credit, hobi) {
+    this.ime = name;
+    this.prezime = lastname;
+    this.posao = job;
+    this.kredit = credit;
+    this.hobi = hobi;
+  }
+}
+
+const jaAldin = new User("aldin", "halilovic", "coach", 0);
+
+console.log(jaAldin);
