@@ -1333,3 +1333,98 @@ class User {
 const jaAldin = new User("aldin", "halilovic", "coach", 0);
 
 console.log(jaAldin);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// const mojeImeObjekat = {
+//   ime: "Aldin",
+//   prezime: "blabas;ldkasl;djsalk",
+// };
+
+// class NewClass {
+//   ime = "ALdin";
+//   prezime = "Halilovic;";
+// }
+
+// const mojeIme = new NewClass();
+
+// console.log(mojeIme);
+
+// class Bus {
+//   seats;
+//   color;
+
+//   constructor(sedista, boja) {
+//     this.color = boja;
+//     this.seats = sedista;
+//   }
+
+//   helloBus() {
+//     console.log("caoooooooo");
+//   }
+
+//   changeColor(newColor) {
+//     this.color = newColor;
+//   }
+
+//   getColor() {
+//     return this.color;
+//   }
+// }
+
+// const lasta = new Bus(55, "zelena");
+
+// console.log(lasta);
+
+// lasta.helloBus();
+
+// lasta.changeColor("zuta");
+// console.log(lasta);
+
+// const bojaAutaobusa = lasta.getColor();
+// console.log(bojaAutaobusa);
+
+class Pet {
+  legNum;
+  tail;
+
+  constructor(noge, rep) {
+    this.legNum = noge;
+    this.tail = rep;
+  }
+}
+
+class Cat extends Pet {
+  name;
+  color;
+
+  constructor(noge, rep, ime, boja) {
+    super(noge, rep);
+    this.name = ime;
+    this.color = boja;
+  }
+}
+
+class Dog extends Cat {
+  constructor(noge, rep, ime, boja) {
+    super(noge, rep, ime, boja);
+  }
+
+  bark() {
+    console.log("arrrr!!!");
+  }
+
+  getTail() {
+    return this.tail;
+  }
+}
+
+const ourCat = new Cat(4, "yes", "Sladjan", "Bela");
+
+const ourDog = new Dog(4, "yes", "Sladjana", "grey");
+
+console.log(ourCat);
+
+console.log(ourDog);
+
+ourDog.bark();
