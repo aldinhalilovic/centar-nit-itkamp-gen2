@@ -1384,47 +1384,183 @@ console.log(jaAldin);
 // const bojaAutaobusa = lasta.getColor();
 // console.log(bojaAutaobusa);
 
-class Pet {
-  legNum;
-  tail;
+// class Pet {
+//   legNum;
+//   tail;
 
-  constructor(noge, rep) {
-    this.legNum = noge;
-    this.tail = rep;
-  }
-}
+//   constructor(noge, rep) {
+//     this.legNum = noge;
+//     this.tail = rep;
+//   }
+// }
 
-class Cat extends Pet {
+// class Cat extends Pet {
+//   name;
+//   color;
+
+//   constructor(noge, rep, ime, boja) {
+//     super(noge, rep);
+//     this.name = ime;
+//     this.color = boja;
+//   }
+// }
+
+// class Dog extends Cat {
+//   constructor(noge, rep, ime, boja) {
+//     super(noge, rep, ime, boja);
+//   }
+
+//   bark() {
+//     console.log("arrrr!!!");
+//   }
+
+//   getTail() {
+//     return this.tail;
+//   }
+// }
+
+// const ourCat = new Cat(4, "yes", "Sladjan", "Bela");
+
+// const ourDog = new Dog(4, "yes", "Sladjana", "grey");
+
+// console.log(ourCat);
+
+// console.log(ourDog);
+
+// ourDog.bark();
+
+////////////////////////////////////////ENKAPSULACIJA////////////////////////////////////////////////////
+
+// class Shop {
+//   #ime;
+//   lokacija;
+//   logo;
+
+//   static brojKasa = 10;
+
+//   constructor(name, location, logo) {
+//     this.#ime = name;
+//     this.lokacija = location;
+//     this.logo = logo;
+//   }
+
+//   get ourName() {
+//     return this.#ime;
+//   }
+
+//   setOurName(nekoIme) {
+//     this.#ime = nekoIme;
+//   }
+// }
+
+// const brojKasaUMaxiju = Shop.brojKasa;
+
+// const maxi = new Shop("maxi", "1. maj", "MaXi");
+
+// console.log(maxi);
+// // console.log(maxi.ime);
+
+// const imeProdavnice = maxi.ourName;
+// console.log(imeProdavnice);
+
+// maxi.setOurName("idea");
+
+// console.log(maxi);
+
+// class Shop {
+//   #ime;
+//   lokacija;
+//   logo;
+
+//   static brojKasa = 10;
+
+//   constructor(name, location, logo) {
+//     this.#ime = name;
+//     this.lokacija = location;
+//     this.logo = logo;
+//   }
+
+//   ourName() {
+//     return this.#ime;
+//   }
+
+//   setOurName(nekoIme) {
+//     this.#ime = nekoIme;
+//   }
+// }
+
+// const nekaProdavnica = new Shop("IDEA", "jedinstvo", "iDEA");
+
+// console.log(nekaProdavnica);
+// // console.log(nekaProdavnica.#ime);
+
+// const imeProdavnice = nekaProdavnica.ourName();
+
+// console.log(imeProdavnice);
+
+// nekaProdavnica.setOurName("RODA");
+
+// console.log(nekaProdavnica);
+
+//////////////////////////////////////////////////////////////////
+
+// abstrakcija
+
+class User {
   name;
-  color;
+  height;
+  width;
+  age;
 
-  constructor(noge, rep, ime, boja) {
-    super(noge, rep);
+  constructor(ime, visina, sirina, godine) {
     this.name = ime;
-    this.color = boja;
+    this.height = visina;
+    this.width = sirina;
+    this.age = godine;
+  }
+
+  checkUserAge() {
+    if (this.age < 16) {
+      console.log("You can pass!");
+    } else {
+      console.log("Sorry, you are too old!");
+    }
+  }
+
+  checkUserHeight() {
+    if (this.height < 160) {
+      console.log("You can pass!");
+    } else {
+      console.log("Sorry, you can not pass!");
+    }
   }
 }
 
-class Dog extends Cat {
-  constructor(noge, rep, ime, boja) {
-    super(noge, rep, ime, boja);
-  }
+const aldin = new User("Aldin", 170, 100, 20);
 
-  bark() {
-    console.log("arrrr!!!");
-  }
+const redzi = new User("Redzi", 182, 3, 18);
 
-  getTail() {
-    return this.tail;
+// aldin.checkUserAge();
+// aldin.checkUserHeight();
+
+const ucenik1 = "Redzi";
+const ucenik2 = "Haris";
+const ucenik3 = "Tarik";
+
+const ucenik1godine = 33;
+const ucenik2godine = 18;
+const ucenik3godine = 25;
+
+// poredjati ucenike po starosti
+
+if (ucenik1godine > ucenik2godine && ucenik1godine > ucenik3godine) {
+  if (ucenik2godine > ucenik3godine) {
+    console.log(
+      `${ucenik1} je stariji od ${ucenik2}, a ${ucenik2} je stariji od ${ucenik3}`
+    );
+  } else {
+    console.log(
+      `${ucenik1} je stariji od ${ucenik3}a, a ${ucenik3} je stariji od ${ucenik2}a`
+    );
   }
 }
-
-const ourCat = new Cat(4, "yes", "Sladjan", "Bela");
-
-const ourDog = new Dog(4, "yes", "Sladjana", "grey");
-
-console.log(ourCat);
-
-console.log(ourDog);
-
-ourDog.bark();
