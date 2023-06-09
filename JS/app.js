@@ -1064,7 +1064,7 @@ const filteredArrayMovies = watchList.filter((el) => {
   }
 });
 
-console.log(filteredArrayMovies);
+// console.log(filteredArrayMovies);
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 // let nekaVrednost = "imad";
 
@@ -1184,7 +1184,7 @@ function checkingUserAge() {
 const ourDeleteFunction = (id, id2) =>
   allUsers.filter((user) => user.id !== id && user.id !== id2);
 
-console.log(ourDeleteFunction(2, 3));
+// console.log(ourDeleteFunction(2, 3));
 // console.log(ourDeleteFunction(3));
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1332,7 +1332,7 @@ class User {
 
 const jaAldin = new User("aldin", "halilovic", "coach", 0);
 
-console.log(jaAldin);
+// console.log(jaAldin);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1506,61 +1506,177 @@ console.log(jaAldin);
 
 // abstrakcija
 
-class User {
-  name;
-  height;
-  width;
-  age;
+// class User {
+//   name;
+//   height;
+//   width;
+//   age;
 
-  constructor(ime, visina, sirina, godine) {
-    this.name = ime;
-    this.height = visina;
-    this.width = sirina;
-    this.age = godine;
-  }
+//   constructor(ime, visina, sirina, godine) {
+//     this.name = ime;
+//     this.height = visina;
+//     this.width = sirina;
+//     this.age = godine;
+//   }
 
-  checkUserAge() {
-    if (this.age < 16) {
-      console.log("You can pass!");
-    } else {
-      console.log("Sorry, you are too old!");
-    }
-  }
+//   checkUserAge() {
+//     if (this.age < 16) {
+//       console.log("You can pass!");
+//     } else {
+//       console.log("Sorry, you are too old!");
+//     }
+//   }
 
-  checkUserHeight() {
-    if (this.height < 160) {
-      console.log("You can pass!");
-    } else {
-      console.log("Sorry, you can not pass!");
-    }
-  }
-}
+//   checkUserHeight() {
+//     if (this.height < 160) {
+//       console.log("You can pass!");
+//     } else {
+//       console.log("Sorry, you can not pass!");
+//     }
+//   }
+// }
 
-const aldin = new User("Aldin", 170, 100, 20);
+// const aldin = new User("Aldin", 170, 100, 20);
 
-const redzi = new User("Redzi", 182, 3, 18);
+// const redzi = new User("Redzi", 182, 3, 18);
 
-// aldin.checkUserAge();
-// aldin.checkUserHeight();
+// // aldin.checkUserAge();
+// // aldin.checkUserHeight();
 
-const ucenik1 = "Redzi";
-const ucenik2 = "Haris";
-const ucenik3 = "Tarik";
+// const ucenik1 = "Redzi";
+// const ucenik2 = "Haris";
+// const ucenik3 = "Tarik";
 
-const ucenik1godine = 33;
-const ucenik2godine = 18;
-const ucenik3godine = 25;
+// const ucenik1godine = 33;
+// const ucenik2godine = 18;
+// const ucenik3godine = 25;
 
 // poredjati ucenike po starosti
 
-if (ucenik1godine > ucenik2godine && ucenik1godine > ucenik3godine) {
-  if (ucenik2godine > ucenik3godine) {
-    console.log(
-      `${ucenik1} je stariji od ${ucenik2}, a ${ucenik2} je stariji od ${ucenik3}`
-    );
+// if (ucenik1godine > ucenik2godine && ucenik1godine > ucenik3godine) {
+//   if (ucenik2godine > ucenik3godine) {
+//     console.log(
+//       `${ucenik1} je stariji od ${ucenik2}, a ${ucenik2} je stariji od ${ucenik3}`
+//     );
+//   } else {
+//     console.log(
+//       `${ucenik1} je stariji od ${ucenik3}a, a ${ucenik3} je stariji od ${ucenik2}a`
+//     );
+//   }
+// }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// const randomNumbers = [2, 5, 30, 32, 45, 50];
+// let reversedArray = [];
+
+// for (let i = randomNumbers.length - 1; i >= 0; i--) {
+//   reversedArray.push(randomNumbers[i]);
+// }
+
+// console.log(randomNumbers);
+// console.log(reversedArray);
+
+// const randomNumbers = [528, 23, 229, 99, 22, 100, 703];
+// let maxNum = 0;
+
+// for (let i = 0; i < randomNumbers.length; i++) {
+//   if (randomNumbers[i] > maxNum) {
+//     maxNum = randomNumbers[i];
+//   }
+// }
+
+// console.log(maxNum);
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+const profesor = {
+  name: "Aldin",
+  course: "Js",
+};
+
+const noviProfesor = {
+  ...profesor,
+  age: 20,
+};
+
+// console.log(profesor);
+// console.log(noviProfesor);
+
+const spredingArray = [512, 23, 54, 33, 115, 222];
+
+const newSprededArray = [...spredingArray, 408, 15, 32];
+
+// console.log(spredingArray);
+// console.log(newSprededArray);
+
+const objectPracticeNew = {
+  mozak: "IMA",
+  ruke: 2,
+  noge: 2,
+  bojaKose: "smedja",
+  bojaOciju: "zelena",
+  age: 25,
+};
+
+function checkUserAgept2(ime, prezime) {
+  if (this.age > 18) {
+    console.log("punoletan ", ime, prezime);
   } else {
-    console.log(
-      `${ucenik1} je stariji od ${ucenik3}a, a ${ucenik3} je stariji od ${ucenik2}a`
-    );
+    console.log("nisi ", ime, prezime);
   }
 }
+
+// checkUserAgept2.call(objectPracticeNew, "Aldin", "Halilovic");
+// checkUserAgept2.apply(objectPracticeNew, ["Aldin", "Halilovic"]);
+// const nekaSestaFunckija = checkUserAgept2.bind(objectPracticeNew);
+// nekaSestaFunckija("dzelal");
+
+// Object.keys(objectPracticeNew);
+// Object.values(objectPracticeNew);
+
+const squaerNumbers = [5, 10, 9, 653, 84];
+const noviNiz = squaerNumbers.map((el) => el * el);
+// console.log(noviNiz);
+
+const tajra = noviNiz.filter((el) => el % 2 === 0);
+// console.log(tajra);
+
+squaerNumbers.map((el, i) => console.log(i, el));
+
+const randomWords = [
+  "macka",
+  "imam",
+  "hodza",
+  "nemam",
+  "pecat",
+  "efendija",
+  "televizor",
+];
+
+const cassa = "aldin";
+
+// console.log(cassa[3]);
+
+const wordD = randomWords.filter((name) => name[1] === "e");
+// console.log(wordD);
+
+const nekiRandomBrojevi = [
+  7, 10, 18, 22, 30, 3, 15, 19, 35, 82, 10, 50, 21, 19,
+];
+
+//  broj veci od 18 >>>>>> * 4
+// broj veci od 18 a manji od 30 >>>>> * 8 onda podeljeno sa 4
+// ostale ne dirati
+
+const maloTeziZadatak = nekiRandomBrojevi.map((broj) => {
+  if (broj > 18 && broj < 30) {
+    return (broj * 8) / 4;
+  } else if (broj > 18) {
+    return broj * 4;
+  } else {
+    return broj;
+  }
+});
+
+console.log(maloTeziZadatak);
