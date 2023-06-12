@@ -1679,4 +1679,77 @@ const maloTeziZadatak = nekiRandomBrojevi.map((broj) => {
   }
 });
 
-console.log(maloTeziZadatak);
+// console.log(maloTeziZadatak);
+////////////////////////////////////////////////////////////////////////////////
+
+// const pocetniNiz = [3, 10, "neka rec"];
+
+// let unos = prompt("Unesi nesto");
+
+// if (+unos / 1 === +unos) {
+//   pocetniNiz.unshift(unos);
+// } else {
+//   pocetniNiz.push(unos);
+// }
+
+// console.log(pocetniNiz);
+
+// const prvaMatrica = [
+//   [20, 12, 25, 12323, 1231232, 222, 3455234123],
+//   [10, 222, 7, 333],
+//   [
+//     99, 33, 46, 99, 33, 46, 99, 33, 46, 99, 33, 46, 99, 33, 46, 99, 33, 46, 99,
+//     33, 46, 99, 33, 46,
+//   ],
+// ];
+
+// for (let i = 0; i < prvaMatrica.length; i++) {
+//   console.log(prvaMatrica[i]);
+//   for (let j = 0; j < prvaMatrica[i].length; j++) {
+//     prvaMatrica[i][j] % 2 === 0
+//       ? console.log("Paran broj")
+//       : console.log("Neparan broj");
+//   }
+// }
+
+const classAges = [17, 17, 16, 21, 23, 16, 25, 20];
+
+const sumAges = classAges.reduce((prev, curr) => prev + curr);
+
+// console.log(sumAges / classAges.length);
+
+const miles = [502.8, 120.5, 350.6, 205.2, 100, 98, 115, 9000, 53];
+
+const kms = miles.map((el) => el * 1.6);
+
+const sum = kms.reduce((prev, cur) => prev + cur);
+
+// console.log(sum / kms.length);
+
+const recenica = "MAMA ima Momu";
+
+let brojMova = 0;
+
+for (let i = 0; i < recenica.length; i++) {
+  console.log(recenica[i]);
+  if (recenica[i].toUpperCase() === "M") {
+    brojMova++;
+  }
+}
+
+console.log(brojMova);
+
+const randomNiz = [123, 423123, "nesto", "parno"];
+
+let unosNeki = "string";
+
+if (typeof unosNeki === "string") {
+  // randomNiz.length = 0;
+
+  for (let i = 0; i <= randomNiz.length; i++) {
+    randomNiz.pop();
+    // console.log(randomNiz, i);
+  }
+} else {
+  randomNiz.push(unosNeki);
+}
