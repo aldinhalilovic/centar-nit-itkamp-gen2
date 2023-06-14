@@ -1590,42 +1590,42 @@ const jaAldin = new User("aldin", "halilovic", "coach", 0);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-const profesor = {
-  name: "Aldin",
-  course: "Js",
-};
+// const profesor = {
+//   name: "Aldin",
+//   course: "Js",
+// };
 
-const noviProfesor = {
-  ...profesor,
-  age: 20,
-};
+// const noviProfesor = {
+//   ...profesor,
+//   age: 20,
+// };
 
 // console.log(profesor);
 // console.log(noviProfesor);
 
-const spredingArray = [512, 23, 54, 33, 115, 222];
+// const spredingArray = [512, 23, 54, 33, 115, 222];
 
-const newSprededArray = [...spredingArray, 408, 15, 32];
+// const newSprededArray = [...spredingArray, 408, 15, 32];
 
 // console.log(spredingArray);
 // console.log(newSprededArray);
 
-const objectPracticeNew = {
-  mozak: "IMA",
-  ruke: 2,
-  noge: 2,
-  bojaKose: "smedja",
-  bojaOciju: "zelena",
-  age: 25,
-};
+// const objectPracticeNew = {
+//   mozak: "IMA",
+//   ruke: 2,
+//   noge: 2,
+//   bojaKose: "smedja",
+//   bojaOciju: "zelena",
+//   age: 25,
+// };
 
-function checkUserAgept2(ime, prezime) {
-  if (this.age > 18) {
-    console.log("punoletan ", ime, prezime);
-  } else {
-    console.log("nisi ", ime, prezime);
-  }
-}
+// function checkUserAgept2(ime, prezime) {
+//   if (this.age > 18) {
+//     console.log("punoletan ", ime, prezime);
+//   } else {
+//     console.log("nisi ", ime, prezime);
+//   }
+// }
 
 // checkUserAgept2.call(objectPracticeNew, "Aldin", "Halilovic");
 // checkUserAgept2.apply(objectPracticeNew, ["Aldin", "Halilovic"]);
@@ -1635,49 +1635,49 @@ function checkUserAgept2(ime, prezime) {
 // Object.keys(objectPracticeNew);
 // Object.values(objectPracticeNew);
 
-const squaerNumbers = [5, 10, 9, 653, 84];
-const noviNiz = squaerNumbers.map((el) => el * el);
-// console.log(noviNiz);
+// const squaerNumbers = [5, 10, 9, 653, 84];
+// const noviNiz = squaerNumbers.map((el) => el * el);
+// // console.log(noviNiz);
 
-const tajra = noviNiz.filter((el) => el % 2 === 0);
-// console.log(tajra);
+// const tajra = noviNiz.filter((el) => el % 2 === 0);
+// // console.log(tajra);
 
-squaerNumbers.map((el, i) => console.log(i, el));
+// squaerNumbers.map((el, i) => console.log(i, el));
 
-const randomWords = [
-  "macka",
-  "imam",
-  "hodza",
-  "nemam",
-  "pecat",
-  "efendija",
-  "televizor",
-];
+// const randomWords = [
+//   "macka",
+//   "imam",
+//   "hodza",
+//   "nemam",
+//   "pecat",
+//   "efendija",
+//   "televizor",
+// ];
 
-const cassa = "aldin";
+// const cassa = "aldin";
 
 // console.log(cassa[3]);
 
-const wordD = randomWords.filter((name) => name[1] === "e");
+// const wordD = randomWords.filter((name) => name[1] === "e");
 // console.log(wordD);
 
-const nekiRandomBrojevi = [
-  7, 10, 18, 22, 30, 3, 15, 19, 35, 82, 10, 50, 21, 19,
-];
+// const nekiRandomBrojevi = [
+//   7, 10, 18, 22, 30, 3, 15, 19, 35, 82, 10, 50, 21, 19,
+// ];
 
 //  broj veci od 18 >>>>>> * 4
 // broj veci od 18 a manji od 30 >>>>> * 8 onda podeljeno sa 4
 // ostale ne dirati
 
-const maloTeziZadatak = nekiRandomBrojevi.map((broj) => {
-  if (broj > 18 && broj < 30) {
-    return (broj * 8) / 4;
-  } else if (broj > 18) {
-    return broj * 4;
-  } else {
-    return broj;
-  }
-});
+// const maloTeziZadatak = nekiRandomBrojevi.map((broj) => {
+//   if (broj > 18 && broj < 30) {
+//     return (broj * 8) / 4;
+//   } else if (broj > 18) {
+//     return broj * 4;
+//   } else {
+//     return broj;
+//   }
+// });
 
 // console.log(maloTeziZadatak);
 ////////////////////////////////////////////////////////////////////////////////
@@ -1712,44 +1712,103 @@ const maloTeziZadatak = nekiRandomBrojevi.map((broj) => {
 //   }
 // }
 
-const classAges = [17, 17, 16, 21, 23, 16, 25, 20];
+// const classAges = [17, 17, 16, 21, 23, 16, 25, 20];
 
-const sumAges = classAges.reduce((prev, curr) => prev + curr);
+// const sumAges = classAges.reduce((prev, curr) => prev + curr);
 
-// console.log(sumAges / classAges.length);
+// // console.log(sumAges / classAges.length);
 
-const miles = [502.8, 120.5, 350.6, 205.2, 100, 98, 115, 9000, 53];
+// const miles = [502.8, 120.5, 350.6, 205.2, 100, 98, 115, 9000, 53];
 
-const kms = miles.map((el) => el * 1.6);
+// const kms = miles.map((el) => el * 1.6);
 
-const sum = kms.reduce((prev, cur) => prev + cur);
+// const sum = kms.reduce((prev, cur) => prev + cur);
 
-// console.log(sum / kms.length);
+// // console.log(sum / kms.length);
 
-const recenica = "MAMA ima Momu";
+// const recenica = "MAMA ima Momu";
 
-let brojMova = 0;
+// let brojMova = 0;
 
-for (let i = 0; i < recenica.length; i++) {
-  console.log(recenica[i]);
-  if (recenica[i].toUpperCase() === "M") {
-    brojMova++;
-  }
-}
+// for (let i = 0; i < recenica.length; i++) {
+//   console.log(recenica[i]);
+//   if (recenica[i].toUpperCase() === "M") {
+//     brojMova++;
+//   }
+// }
 
-console.log(brojMova);
+// // console.log(brojMova);
 
-const randomNiz = [123, 423123, "nesto", "parno"];
+// const randomNiz = [123, 423123, "nesto", "parno"];
 
-let unosNeki = "string";
+// let unosNeki = "string";
 
-if (typeof unosNeki === "string") {
-  // randomNiz.length = 0;
+// if (typeof unosNeki === "string") {
+//   // randomNiz.length = 0;
 
-  for (let i = 0; i <= randomNiz.length; i++) {
-    randomNiz.pop();
-    // console.log(randomNiz, i);
-  }
-} else {
-  randomNiz.push(unosNeki);
-}
+//   for (let i = 0; i <= randomNiz.length; i++) {
+//     randomNiz.pop();
+//     // console.log(randomNiz, i);
+//   }
+// } else {
+//   randomNiz.push(unosNeki);
+// }
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// var mojeIme = "ALdin";
+
+// var mojeIme;
+
+// console.log(mojeIme);
+
+// console.log(mojeIme);
+// mojeIme = 10;
+
+// console.log(mojeIme);
+
+// var mojeIme;
+
+// mojeIme = 10;
+
+// console.log(hdmi);
+// let hdmi;
+
+// hdmi = 10;
+// console.log(hdmi);
+
+// nekeaFunkcija();
+
+// const nekeaFunkcija = () => {
+//   console.log("John Doe");
+// };
+
+// greetings(hisName);
+
+// function greetings(nekoIme) {
+//   console.log(nekoIme, "gde koci ?");
+// }
+
+// var hisName = "Muzafer1234%^&*";
+// let brojac = 0;
+
+// for (let i = 0; i < hisName.length; i++) {
+//   if (+hisName[i] / 1 === +hisName[i]) {
+//     console.log("ima");
+//   } else {
+//     brojac++;
+//   }
+// }
+
+const automobili = {
+  ja: ["vw", "audi", "cayenne", "targa"],
+  tajra: ["golf", "audi", "bmw"],
+  iman: ["peugeot", "fiat", "citroen", "x5"],
+  bronja: ["pagani", "mclaren", "rollce roys"],
+};
+
+const allCars = Object.values(automobili);
+
+// console.log(allCars);
+
+const drugiAutomobili = allCars.map((car) => [...car, car.length]);
+console.log(drugiAutomobili);
