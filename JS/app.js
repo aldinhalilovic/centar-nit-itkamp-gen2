@@ -1976,23 +1976,53 @@ console.log(drugiAutomobili);
 // .catch((data) => console.log(`Osoba je punoletna za ${18 - data} godina`))
 // .finally(() => console.log("Izvrsili smo validaciju godina"));
 
-const fetchData = () => {
-  let nekiTodo = prompt("Unesite broj od 0 do 200");
-  // nekiTodo = 2;
-  fetch(`https://jsonplaceholder.typicode.com/todos/${nekiTodo}`)
-    .then((response) => response.json())
-    .then((json) => console.log(json))
-    .catch((er) => console.log(er, "OVO JE ERORRRRRRRRRRRRRRRRRRRRRRRRRR"));
+// const fetchData = () => {
+// let nekiTodo = prompt("Unesite broj od 0 do 200");
+// nekiTodo = 2;
+// fetch(`https://jsonplaceholder.typicode.com/todos/${nekiTodo}`)
+//   .then((response) => response.json())
+//   .then((json) => console.log(json))
+//   .catch((er) => console.log(er, "OVO JE ERORRRRRRRRRRRRRRRRRRRRRRRRRR"));
 
-  // .then((json) => {
-  //   console.log(json);
-  //   return json.filter((el) => el.id % 2 === 0);
-  // })
-  // .then((filteredArray) => {
-  //   console.log(filteredArray);
-  //   return filteredArray.filter((el) => el.completed);
-  // })
-  // .then((completedTodos) => console.log(completedTodos));
-};
+// .then((json) => {
+//   console.log(json);
+//   return json.filter((el) => el.id % 2 === 0);
+// })
+// .then((filteredArray) => {
+//   console.log(filteredArray);
+//   return filteredArray.filter((el) => el.completed);
+// })
+// .then((completedTodos) => console.log(completedTodos));
+// };
 
 // fetchData();
+
+const fetchingData = async () => {
+  // const data = await fetch("https://jsonplaceholder.typicode.com/todos");
+  const data = await fetch(
+    "https://jsonplaceholder.typicode.com/posts/1/comments"
+  );
+  const result = await data.json();
+  // console.log(result);
+  const filtered = await result.filter((el) => el.id % 2 === 0);
+  // console.log(filtered);
+
+  return { result, filtered };
+  // return {
+  //   result: result,
+  //   filtered: filtered,
+  // };
+};
+
+// fetchingData().then((el) => console.log(el));
+
+const fetchingComments = async (broj) => {
+  const comments = await fetch(
+    `https://jsonplaceholder.typicode.com/comments?postId=${broj}`
+  );
+  const result = await comments.json();
+
+  console.log(result);
+};
+
+fetchingComments(37);
