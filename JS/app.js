@@ -2026,3 +2026,127 @@ const fetchingComments = async (broj) => {
 };
 
 fetchingComments(37);
+
+const forPractice = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+/* 
+  1    00 
+    5    11
+      9    22
+*/
+
+/*  
+      3       forPractice[0][2]
+    5       forPractice[1][1]
+  7     forPractice[2][0]
+*/
+
+// for (let i = 0; i < forPractice.length; i++) {
+//   // console.log(forPractice[i][i]);
+//   for (let j = 0; j < forPractice[i].length; j++) {
+//     if (i + j === 2) {
+//       console.log(forPractice[i][j]);
+//     }
+//   }
+// }
+
+// for (let i = 0; i < 10; i++) {
+//   console.log(i);
+// }
+
+// const number = 10;
+// let i = 10;
+
+// do {
+//   console.log("broj manji od 10", "DO", i);
+//   i++;
+//   // break;
+// } while (i < 10);
+
+// while (i < 10) {
+//   console.log("broj manji od 10", "WHILE", i);
+//   i++;
+//   // break;
+// }
+
+// const randomBrojeviPractice = [
+//   3, 5, 7, 213, 6345412, 3125, 43, 123, 123, 23451, 345, 788, 56, 4, 94,
+// ];
+
+// let najveciZbir = { zbir: 0 };
+// let zbirTri = 0;
+// let sum = [];
+
+// for (let i = 1; i < randomBrojeviPractice.length - 1; i++) {
+//   zbirTri =
+//     randomBrojeviPractice[i - 1] +
+//     randomBrojeviPractice[i] +
+//     randomBrojeviPractice[i + 1];
+//   sum.push({ zbir: zbirTri, indexi: [i - 1, i, i + 1] });
+// }
+
+// for (let i = 0; i < sum.length; i++) {
+//   let pomocna = sum[i];
+
+//   if (najveciZbir.zbir < pomocna.zbir) {
+//     najveciZbir = pomocna;
+//   }
+// }
+
+// console.log(sum);
+// console.log(najveciZbir);
+
+// const lakjdklasd = [23, 5234, 235, 32412, 323543, 4123];
+
+// lakjdklasd.map((el) => el + 3);
+
+// const customMap = (array, callbackFunkcija) => {
+//   const newArray = [];
+
+//   for (let i = 0; i < array.length; i++) {
+//     newArray.push(callbackFunkcija(array[i]));
+//   }
+
+//   return newArray;
+// };
+
+// function addThree(el) {
+//   return el + 3;
+// }
+
+// console.log(customMap(lakjdklasd, addThree));
+
+function smanji(broj) {
+  if (broj === 1) return;
+  broj--;
+  console.log(broj);
+  smanji(broj);
+}
+
+//recursion
+
+let nesto = 30;
+// smanji(nesto);
+
+const everyBumlskadjs = [3, 7, 10, 11];
+
+everyBumlskadjs.forEach((el) => el + 4);
+
+const vezbaNIzova = [
+  [4, 12, 100, 3],
+  [2, 5, 7, 9, 3],
+  [11, 53, 75, 87],
+  [3],
+  [4],
+];
+
+[[4, 12, 100], [2], [], [], [4]][
+  // za parne
+
+  ([3], [5, 7, 9, 3], [11, 53, 75, 87], [3], [])
+];
+
+//za neparne
